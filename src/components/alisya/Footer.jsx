@@ -32,12 +32,12 @@ export default function Footer() {
           <div className="md:col-span-6 grid grid-cols-2 gap-8">
             <div>
               <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-4">Contact</p>
-              <a href="mailto:info@alisya.nl" className="block text-white text-lg hover:text-white/70 transition-colors mb-2">info@alisya.nl</a>
-              <a href="tel:+31201234567" className="block text-white text-lg hover:text-white/70 transition-colors">+31 20 123 4567</a>
+              <a href="mailto:info@alisyaservice.nl" className="block text-white text-lg hover:text-white/70 transition-colors mb-2">info@alisyaservice.nl</a>
+              <a href="tel:+31629324102" className="block text-white text-lg hover:text-white/70 transition-colors">06-29324102</a>
             </div>
             <div>
               <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-4">Atelier</p>
-              <p className="text-white text-lg leading-relaxed">Prinsengracht 123<br />1015 RK Amsterdam<br />Nederland</p>
+              <p className="text-white text-lg leading-relaxed">Irawan Soejonostraat 27<br />1069 PG Amsterdam<br />Nederland</p>
             </div>
           </div>
         </div>

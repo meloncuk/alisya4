@@ -94,9 +94,9 @@ export default function Navigation() {
                 ))}
               </nav>
               <div className="px-6 md:px-12 pb-10 text-white/80 text-sm tracking-wide">
-                <a href="mailto:info@alisya.nl" className="hover:text-white transition-colors">info@alisya.nl</a>
+                <a href="mailto:info@alisyaservice.nl" className="hover:text-white transition-colors">info@alisyaservice.nl</a>
                 <span className="mx-3">·</span>
-                <a href="tel:+31201234567" className="hover:text-white transition-colors">+31 20 123 4567</a>
+                <a href="tel:+31629324102" className="hover:text-white transition-colors">06-29324102</a>
               </div>
             </div>
           </motion.div>

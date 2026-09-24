@@ -21,50 +21,52 @@ const STEPS = [
 
 
 function SakuraBackground() {
+  const Blossom = ({ x, y, scale = 1 }) => (
+    <g transform={`translate(${x} ${y}) scale(${scale})`}>
+      <ellipse cx="0" cy="-8" rx="5.5" ry="8" fill="#E7B0A0" />
+      <ellipse cx="7.5" cy="-2" rx="5.5" ry="8" transform="rotate(72 7.5 -2)" fill="#DFA08E" />
+      <ellipse cx="4.5" cy="7" rx="5.5" ry="8" transform="rotate(144 4.5 7)" fill="#EDB9AA" />
+      <ellipse cx="-4.5" cy="7" rx="5.5" ry="8" transform="rotate(216 -4.5 7)" fill="#E3A694" />
+      <ellipse cx="-7.5" cy="-2" rx="5.5" ry="8" transform="rotate(288 -7.5 -2)" fill="#F0C1B4" />
+      <circle r="2.6" fill="#A96F5A" />
+    </g>
+  );
+
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
-      {/* Left branch */}
-      <svg className="absolute -left-8 top-8 w-[310px] sm:w-[390px] md:w-[500px] h-auto opacity-70"
-           viewBox="0 0 500 720" fill="none">
-        <path d="M-15 75 C90 120, 98 230, 185 278 C255 316, 242 410, 342 472 C390 502, 428 575, 505 625"
-              stroke="#806754" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M177 274 C145 222, 145 170, 174 112 M247 399 C303 360, 330 305, 337 246 M342 472 C306 516, 298 565, 314 617"
-              stroke="#806754" strokeWidth="3" strokeLinecap="round"/>
-        {[[77,150],[111,204],[171,119],[185,278],[225,330],[285,371],[335,251],[342,472],[315,614],[405,539],[458,589]].map(([x,y],i)=>(
-          <g key={i} transform={`translate(${x} ${y})`}>
-            <circle r="14" fill="#d58b73"/>
-            <circle cx="-12" cy="-4" r="11" fill="#e7aa94"/>
-            <circle cx="11" cy="-6" r="11" fill="#efb8a4"/>
-            <circle cx="-6" cy="11" r="10" fill="#e9a38c"/>
-            <circle cx="7" cy="10" r="10" fill="#f0b7a2"/>
-            <circle r="3.5" fill="#9c634f"/>
-          </g>
-        ))}
+      <svg className="absolute -left-8 -top-6 w-[270px] sm:w-[330px] md:w-[410px] h-auto opacity-[0.52]"
+           viewBox="0 0 430 390" fill="none">
+        <path d="M-20 42 C70 58 104 94 153 139 C202 184 251 192 331 239 C363 258 389 282 432 306"
+              stroke="#8D725F" strokeWidth="3.2" strokeLinecap="round"/>
+        <path d="M111 105 C119 69 143 43 177 21 M201 176 C229 142 250 111 252 76 M314 230 C342 207 365 188 395 177"
+              stroke="#8D725F" strokeWidth="2" strokeLinecap="round"/>
+        <Blossom x={76} y={72} scale={1.0} />
+        <Blossom x={139} y={78} scale={0.82} />
+        <Blossom x={176} y={22} scale={0.9} />
+        <Blossom x={207} y={175} scale={1.05} />
+        <Blossom x={253} y={78} scale={0.76} />
+        <Blossom x={315} y={230} scale={0.92} />
+        <Blossom x={396} y={178} scale={0.78} />
+        <circle cx="159" cy="132" r="3.2" fill="#C88B78"/>
+        <circle cx="346" cy="248" r="2.8" fill="#C88B78"/>
       </svg>
 
-      {/* Right branch */}
-      <svg className="absolute -right-10 bottom-0 w-[280px] sm:w-[360px] md:w-[470px] h-auto opacity-60"
-           viewBox="0 0 500 720" fill="none">
-        <path d="M520 690 C422 642, 418 550, 342 502 C272 458, 294 373, 202 316 C145 280, 105 191, 5 130"
-              stroke="#806754" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M344 503 C390 466, 406 412, 395 354 M202 316 C242 276, 256 226, 242 176 M120 241 C81 261, 55 298, 43 341"
-              stroke="#806754" strokeWidth="3" strokeLinecap="round"/>
-        {[[432,608],[390,552],[345,502],[394,358],[291,405],[204,316],[242,179],[151,267],[103,207],[53,157],[44,339]].map(([x,y],i)=>(
-          <g key={i} transform={`translate(${x} ${y})`}>
-            <circle r="14" fill="#d58b73"/>
-            <circle cx="-12" cy="-4" r="11" fill="#e7aa94"/>
-            <circle cx="11" cy="-6" r="11" fill="#efb8a4"/>
-            <circle cx="-6" cy="11" r="10" fill="#e9a38c"/>
-            <circle cx="7" cy="10" r="10" fill="#f0b7a2"/>
-            <circle r="3.5" fill="#9c634f"/>
-          </g>
-        ))}
+      <svg className="absolute -right-5 -bottom-8 w-[220px] sm:w-[280px] md:w-[350px] h-auto opacity-[0.42]"
+           viewBox="0 0 380 330" fill="none">
+        <path d="M390 294 C320 270 292 236 252 205 C214 175 176 158 111 121 C74 100 41 72 -12 52"
+              stroke="#8D725F" strokeWidth="3" strokeLinecap="round"/>
+        <path d="M276 224 C302 193 317 166 317 135 M181 161 C197 132 202 104 196 78 M103 117 C76 131 57 151 45 174"
+              stroke="#8D725F" strokeWidth="1.9" strokeLinecap="round"/>
+        <Blossom x={318} y={137} scale={0.82} />
+        <Blossom x={274} y={222} scale={0.96} />
+        <Blossom x={198} y={79} scale={0.72} />
+        <Blossom x={181} y={160} scale={0.9} />
+        <Blossom x={103} y={117} scale={0.8} />
+        <Blossom x={45} y={174} scale={0.68} />
       </svg>
 
-      {/* a few petals toward the center */}
-      <span className="absolute left-[25%] top-[22%] w-3 h-5 rounded-full bg-[#d58b73]/40 rotate-[35deg]" />
-      <span className="absolute right-[28%] top-[43%] w-3 h-5 rounded-full bg-[#e7aa94]/45 -rotate-[30deg]" />
-      <span className="absolute left-[31%] bottom-[18%] w-2.5 h-4 rounded-full bg-[#d58b73]/35 rotate-[55deg]" />
+      <span className="absolute left-[28%] top-[24%] w-2 h-3.5 rounded-full bg-[#DFA08E]/30 rotate-[38deg]" />
+      <span className="absolute right-[30%] bottom-[22%] w-2 h-3.5 rounded-full bg-[#E7B0A0]/25 -rotate-[28deg]" />
     </div>
   );
 }
