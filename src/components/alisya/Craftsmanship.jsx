@@ -56,8 +56,27 @@ function SakuraBackground() {
       ].map(([left,top,rotate],i)=><span key={`mobile-static-${i}`} style={{position:"absolute",left,top,width:8,height:15,borderRadius:"70% 30% 70% 30%",background:i%2?"#E7B0A0":"#DFA08E",opacity:.38,transform:`rotate(${rotate}deg)`}} />)}
     </div>
 
+    {/* Masaüstünde boşlukları dolduran ikinci katman: ince yan dallar + çiçek kümeleri */}
+    <svg className="hidden md:block absolute left-[2%] top-[39%] w-[360px] lg:w-[470px] h-auto opacity-[0.42]" viewBox="0 0 470 250" fill="none">
+      <path d="M-18 226 C74 194 126 159 177 124 C237 83 303 62 488 24" stroke="#8B705E" strokeWidth="2.5" strokeLinecap="round"/>
+      <path d="M132 154 C109 121 104 91 116 61 M241 83 C264 105 279 131 284 158 M345 53 C365 73 376 91 381 114" stroke="#8B705E" strokeWidth="1.6" strokeLinecap="round"/>
+      <Blossom x={75} y={194} scale={.65}/><Blossom x={116} y={62} scale={.72}/><Blossom x={177} y={124} scale={.7}/><Blossom x={284} y={158} scale={.68}/><Blossom x={345} y={53} scale={.72}/><Blossom x={420} y={38} scale={.64}/>
+    </svg>
+    <svg className="hidden md:block absolute right-[1%] top-[57%] w-[340px] lg:w-[450px] h-auto opacity-[0.40]" viewBox="0 0 450 260" fill="none">
+      <path d="M470 236 C386 205 337 171 287 137 C231 99 166 72 -20 29" stroke="#8B705E" strokeWidth="2.5" strokeLinecap="round"/>
+      <path d="M337 171 C359 136 362 108 350 79 M231 99 C207 119 192 143 185 169 M109 58 C91 79 82 100 80 122" stroke="#8B705E" strokeWidth="1.6" strokeLinecap="round"/>
+      <Blossom x={397} y={210} scale={.65}/><Blossom x={350} y={80} scale={.72}/><Blossom x={287} y={137} scale={.7}/><Blossom x={185} y={169} scale={.68}/><Blossom x={109} y={58} scale={.72}/><Blossom x={34} y={41} scale={.64}/>
+    </svg>
+    <div className="hidden md:block absolute inset-0">
+      {[
+        ["12%","25%",28],["39%","29%",-34],["58%","35%",20],["88%","31%",-24],
+        ["9%","52%",-18],["47%","48%",42],["76%","51%",-36],["30%","66%",24],
+        ["61%","72%",-22],["90%","76%",38],["42%","84%",-31]
+      ].map(([left,top,rotate],i)=><span key={`desktop-static-${i}`} style={{position:"absolute",left,top,width:9,height:17,borderRadius:"70% 30% 70% 30%",background:i%2?"#E7B0A0":"#DFA08E",opacity:.30,transform:`rotate(${rotate}deg)`}} />)}
+    </div>
+
     {/* Hafif pembe atmosfer */}
-    <div className="hidden md:block" style={{position:"absolute",left:"22%",top:"22%",width:"56%",height:"55%",background:"radial-gradient(ellipse at center, rgba(231,176,160,.11), rgba(231,176,160,0) 68%)"}}/>
+    <div className="hidden md:block" style={{position:"absolute",left:"18%",top:"18%",width:"64%",height:"64%",background:"radial-gradient(ellipse at center, rgba(231,176,160,.14), rgba(231,176,160,0) 70%)"}}/>
 
     {/* Görünür ama sakin düşen yapraklar */}
     {[
