@@ -14,16 +14,16 @@ function Blossom({ x, y, scale = 1 }) {
 }
 
 function SakuraBackground() {
-  return <div className="absolute inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
-    <svg className="absolute -left-10 top-2 w-[300px] sm:w-[370px] md:w-[520px] lg:w-[650px] h-auto opacity-[0.62]" viewBox="0 0 650 470" fill="none">
+  return <div className="absolute inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true" style={{background:"linear-gradient(180deg,#F7F0E7 0%,#F4EBDD 48%,#F8F1E8 100%)"}}>
+    <svg className="absolute -left-10 top-2 w-[300px] sm:w-[370px] md:w-[520px] lg:w-[650px] h-auto opacity-[0.72]" viewBox="0 0 650 470" fill="none">
       <path d="M-25 42 C80 66 123 116 183 166 C245 217 306 226 395 278 C467 320 520 355 667 420" stroke="#826957" strokeWidth="4" strokeLinecap="round"/><path d="M130 121 C143 77 170 45 211 18 M243 213 C281 167 306 125 311 78 M394 278 C432 243 472 218 516 205 M487 334 C525 306 561 290 604 286" stroke="#826957" strokeWidth="2.4" strokeLinecap="round"/>
       <Blossom x={91} y={79}/><Blossom x={145} y={111} scale={.8}/><Blossom x={210} y={20}/><Blossom x={244} y={211}/><Blossom x={310} y={80} scale={.85}/><Blossom x={395} y={278}/><Blossom x={516} y={205} scale={.9}/><Blossom x={604} y={286} scale={.9}/>
     </svg>
-    <svg className="absolute -right-8 -bottom-8 w-[270px] sm:w-[340px] md:w-[480px] lg:w-[590px] h-auto opacity-[0.56]" viewBox="0 0 590 430" fill="none">
+    <svg className="absolute -right-8 -bottom-8 w-[270px] sm:w-[340px] md:w-[480px] lg:w-[590px] h-auto opacity-[0.68]" viewBox="0 0 590 430" fill="none">
       <path d="M615 405 C514 372 470 329 414 286 C354 240 298 219 216 171 C147 131 91 86 -20 47" stroke="#826957" strokeWidth="4" strokeLinecap="round"/><path d="M469 329 C508 286 527 248 527 204 M344 236 C372 194 381 153 372 112 M216 171 C176 193 147 223 128 259" stroke="#826957" strokeWidth="2.4" strokeLinecap="round"/>
       <Blossom x={527} y={205}/><Blossom x={469} y={329}/><Blossom x={372} y={113} scale={.82}/><Blossom x={344} y={236}/><Blossom x={216} y={171} scale={.9}/><Blossom x={128} y={259} scale={.82}/>
     </svg>
-    <svg className="hidden md:block absolute left-[32%] -top-3 w-[300px] lg:w-[390px] h-auto opacity-[0.30]" viewBox="0 0 390 155" fill="none"><path d="M0 25 C78 39 130 65 194 75 C261 86 315 82 390 127" stroke="#927866" strokeWidth="2.2" strokeLinecap="round"/><Blossom x={82} y={43} scale={.68}/><Blossom x={190} y={72} scale={.65}/><Blossom x={315} y={91} scale={.65}/></svg>
+    <svg className="hidden md:block absolute left-[32%] -top-3 w-[300px] lg:w-[390px] h-auto opacity-[0.38]" viewBox="0 0 390 155" fill="none"><path d="M0 25 C78 39 130 65 194 75 C261 86 315 82 390 127" stroke="#927866" strokeWidth="2.2" strokeLinecap="round"/><Blossom x={82} y={43} scale={.68}/><Blossom x={190} y={72} scale={.65}/><Blossom x={315} y={91} scale={.65}/></svg>
     <span style={{position:"absolute",left:"27%",top:"31%",width:8,height:16,borderRadius:"70% 30% 70% 30%",background:"#DFA08E",opacity:.35,transform:"rotate(42deg)"}}/>
     <span style={{position:"absolute",right:"31%",top:"20%",width:8,height:16,borderRadius:"70% 30% 70% 30%",background:"#E7B0A0",opacity:.30,transform:"rotate(-30deg)"}}/>
 
@@ -36,12 +36,32 @@ function SakuraBackground() {
       <Blossom x={701} y={47} scale={.72}/><Blossom x={803} y={139} scale={.7}/><Blossom x={856} y={44} scale={.76}/>
     </svg>
 
+    {/* Telefonda 02 alanını boş bırakmayan orta sakura dalları */}
+    <svg className="md:hidden absolute -right-16 top-[31%] w-[260px] h-auto opacity-[0.64]" viewBox="0 0 300 250" fill="none">
+      <path d="M320 18 C248 42 219 75 179 105 C143 132 104 148 28 183" stroke="#826957" strokeWidth="3" strokeLinecap="round"/>
+      <path d="M218 76 C236 106 239 132 230 158 M143 132 C128 104 105 88 76 80" stroke="#826957" strokeWidth="1.8" strokeLinecap="round"/>
+      <Blossom x={250} y={42} scale={.75}/><Blossom x={218} y={76} scale={.68}/><Blossom x={230} y={158} scale={.72}/><Blossom x={143} y={132} scale={.76}/><Blossom x={76} y={80} scale={.66}/><Blossom x={44} y={176} scale={.7}/>
+    </svg>
+    <svg className="md:hidden absolute -left-14 top-[50%] w-[230px] h-auto opacity-[0.52]" viewBox="0 0 260 210" fill="none">
+      <path d="M-15 185 C55 160 91 132 124 100 C158 68 192 48 276 25" stroke="#8B705E" strokeWidth="2.7" strokeLinecap="round"/>
+      <path d="M91 132 C76 102 76 78 89 56 M158 68 C178 86 190 106 195 129" stroke="#8B705E" strokeWidth="1.6" strokeLinecap="round"/>
+      <Blossom x={54} y={158} scale={.65}/><Blossom x={89} y={57} scale={.68}/><Blossom x={124} y={100} scale={.7}/><Blossom x={195} y={129} scale={.65}/><Blossom x={224} y={40} scale={.68}/>
+    </svg>
+
+    {/* Telefonda üç bölüm boyunca dengeli yaprak dokusu */}
+    <div className="md:hidden absolute inset-0">
+      {[
+        ["76%","27%",-22],["19%","35%",34],["63%","43%",18],["34%","49%",-38],
+        ["81%","55%",42],["12%","61%",-18],["55%","68%",28],["27%","75%",48],["72%","82%",-30]
+      ].map(([left,top,rotate],i)=><span key={`mobile-static-${i}`} style={{position:"absolute",left,top,width:8,height:15,borderRadius:"70% 30% 70% 30%",background:i%2?"#E7B0A0":"#DFA08E",opacity:.38,transform:`rotate(${rotate}deg)`}} />)}
+    </div>
+
     {/* Hafif pembe atmosfer */}
     <div className="hidden md:block" style={{position:"absolute",left:"22%",top:"22%",width:"56%",height:"55%",background:"radial-gradient(ellipse at center, rgba(231,176,160,.11), rgba(231,176,160,0) 68%)"}}/>
 
     {/* Görünür ama sakin düşen yapraklar */}
     {[
-      ["17%","9%",0],["31%","4%",.55],["48%","10%",1.1],["66%","5%",.35],["82%","12%",1.45]
+      ["17%","9%",0],["31%","4%",.55],["48%","10%",1.1],["66%","5%",.35],["82%","12%",1.45],["22%","34%",.8],["72%","39%",1.8],["42%","53%",.25],["84%","63%",1.2],["18%","72%",1.55]
     ].map(([left,top,delay], i) => (
       <motion.span key={`petal-${i}`}
         initial={{opacity:0,y:-12,x:0,rotate:-15}}
@@ -62,7 +82,7 @@ function NumberReveal({ num }) {
 }
 
 export default function Craftsmanship() {
-  return <section id="vakmanschap" className="relative py-24 md:py-32 bg-muted grain overflow-hidden">
+  return <section id="vakmanschap" className="relative py-24 md:py-32 grain overflow-hidden">
     <SakuraBackground />
     <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: .7 }} className="mb-16 md:mb-24">
