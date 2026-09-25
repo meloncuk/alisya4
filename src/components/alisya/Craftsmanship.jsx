@@ -24,23 +24,33 @@ function SakuraBackground() {
       <Blossom x={527} y={205}/><Blossom x={469} y={329}/><Blossom x={372} y={113} scale={.82}/><Blossom x={344} y={236}/><Blossom x={216} y={171} scale={.9}/><Blossom x={128} y={259} scale={.82}/>
     </svg>
     <svg className="hidden md:block absolute left-[32%] -top-3 w-[300px] lg:w-[390px] h-auto opacity-[0.30]" viewBox="0 0 390 155" fill="none"><path d="M0 25 C78 39 130 65 194 75 C261 86 315 82 390 127" stroke="#927866" strokeWidth="2.2" strokeLinecap="round"/><Blossom x={82} y={43} scale={.68}/><Blossom x={190} y={72} scale={.65}/><Blossom x={315} y={91} scale={.65}/></svg>
-    <span className="absolute left-[27%] top-[31%] w-2 h-4 rounded-full bg-[#DFA08E]/35 rotate-[42deg]"/><span className="absolute right-[31%] top-[20%] w-2 h-4 rounded-full bg-[#E7B0A0]/30 -rotate-[30deg]"/>
+    <span style={{position:"absolute",left:"27%",top:"31%",width:8,height:16,borderRadius:"70% 30% 70% 30%",background:"#DFA08E",opacity:.35,transform:"rotate(42deg)"}}/>
+    <span style={{position:"absolute",right:"31%",top:"20%",width:8,height:16,borderRadius:"70% 30% 70% 30%",background:"#E7B0A0",opacity:.30,transform:"rotate(-30deg)"}}/>
 
-    {/* Geniş ekranda boşluğu kıran zarif sakura atmosferi */}
-    <svg className="hidden lg:block absolute right-[26%] bottom-[2%] w-[280px] opacity-[0.16]" viewBox="0 0 300 120" fill="none">
-      <path d="M300 105 C235 88 190 73 145 61 C96 48 54 30 0 16" stroke="#927866" strokeWidth="2" strokeLinecap="round"/>
-      <Blossom x={235} y={88} scale={.58}/><Blossom x={145} y={61} scale={.65}/><Blossom x={55} y={31} scale={.55}/>
+    {/* Masaüstünde orta alanı gerçekten dolduran, fakat yazıyı boğmayan çiçekli dal */}
+    <svg className="hidden md:block" style={{position:"absolute",left:"18%",right:"18%",top:"18%",width:"64%",height:"64%",opacity:.22}} viewBox="0 0 900 360" fill="none">
+      <path d="M-20 315 C120 260 185 210 285 198 C395 184 465 135 560 122 C675 106 760 64 925 22" stroke="#876D5B" strokeWidth="3" strokeLinecap="round"/>
+      <path d="M180 222 C155 180 151 143 169 105 M362 170 C337 133 333 100 346 67 M610 111 C633 78 662 58 701 47 M745 73 C771 91 790 111 803 139" stroke="#876D5B" strokeWidth="1.8" strokeLinecap="round"/>
+      <Blossom x={92} y={272} scale={.75}/><Blossom x={168} y={107} scale={.82}/><Blossom x={285} y={198} scale={.72}/>
+      <Blossom x={346} y={68} scale={.72}/><Blossom x={468} y={135} scale={.78}/><Blossom x={610} y={111} scale={.8}/>
+      <Blossom x={701} y={47} scale={.72}/><Blossom x={803} y={139} scale={.7}/><Blossom x={856} y={44} scale={.76}/>
     </svg>
 
-    {/* Bölüme girildiğinde bir kez nazikçe süzülen yapraklar */}
-    <motion.span initial={{opacity:0,y:-15,rotate:-15}} whileInView={{opacity:[0,.34,.26,0],y:[0,80,165,245],x:[0,15,-8,18],rotate:[-15,35,90,155]}} viewport={{once:true,amount:.15}} transition={{duration:5.8,delay:.15,ease:"easeInOut"}} className="absolute left-[18%] top-[7%] w-3 h-5 rounded-[70%_30%_70%_30%] bg-[#DFA08E]"/>
-    <motion.span initial={{opacity:0,y:-12,rotate:10}} whileInView={{opacity:[0,.3,.24,0],y:[0,95,185,275],x:[0,-14,12,-4],rotate:[10,65,125,190]}} viewport={{once:true,amount:.15}} transition={{duration:6.5,delay:.65,ease:"easeInOut"}} className="absolute left-[42%] top-[3%] w-2.5 h-4 rounded-[65%_35%_65%_35%] bg-[#E7B0A0]"/>
-    <motion.span initial={{opacity:0,y:-16,rotate:-8}} whileInView={{opacity:[0,.32,.24,0],y:[0,85,175,260],x:[0,18,3,22],rotate:[-8,50,110,175]}} viewport={{once:true,amount:.15}} transition={{duration:6.1,delay:1.05,ease:"easeInOut"}} className="absolute right-[34%] top-[8%] w-3 h-5 rounded-[70%_30%_70%_30%] bg-[#EDB9AA]"/>
-    <motion.span initial={{opacity:0,y:-10,rotate:18}} whileInView={{opacity:[0,.28,.22,0],y:[0,72,150,225],x:[0,-10,15,-2],rotate:[18,75,135,205]}} viewport={{once:true,amount:.15}} transition={{duration:5.5,delay:1.45,ease:"easeInOut"}} className="hidden md:block absolute right-[16%] top-[5%] w-2.5 h-4 rounded-[65%_35%_65%_35%] bg-[#DFA08E]"/>
+    {/* Hafif pembe atmosfer */}
+    <div className="hidden md:block" style={{position:"absolute",left:"22%",top:"22%",width:"56%",height:"55%",background:"radial-gradient(ellipse at center, rgba(231,176,160,.11), rgba(231,176,160,0) 68%)"}}/>
 
-    <div className="hidden md:block absolute left-[7%] bottom-[8%] w-28 h-28 rounded-full bg-[#E7B0A0]/[0.06] blur-3xl"/>
-    <div className="hidden md:block absolute right-[9%] top-[15%] w-32 h-32 rounded-full bg-[#DFA08E]/[0.05] blur-3xl"/>
-
+    {/* Görünür ama sakin düşen yapraklar */}
+    {[
+      ["17%","9%",0],["31%","4%",.55],["48%","10%",1.1],["66%","5%",.35],["82%","12%",1.45]
+    ].map(([left,top,delay], i) => (
+      <motion.span key={`petal-${i}`}
+        initial={{opacity:0,y:-12,x:0,rotate:-15}}
+        whileInView={{opacity:[0,.48,.34,0],y:[0,80,170,260],x:[0,16,-10,14],rotate:[-15,35,105,175]}}
+        viewport={{once:true,amount:.12}}
+        transition={{duration:6 + i*.35,delay,ease:"easeInOut"}}
+        style={{position:"absolute",left,top,width:10,height:17,borderRadius:"70% 30% 70% 30%",background:i%2 ? "#E7B0A0" : "#DFA08E"}}
+      />
+    ))}
   </div>;
 }
 
