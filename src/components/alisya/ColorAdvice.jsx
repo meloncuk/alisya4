@@ -34,7 +34,24 @@ export default function ColorAdvice() {
     }
     setSubmitting(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 450));
+      const response = await fetch("https://formspree.io/f/xljdwalb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          naam: form.name,
+          email: form.email,
+          telefoon: form.phone || "-",
+          sfeer: mood || "-",
+          ruimte: space || "-",
+          bericht: form.message || "-",
+          _subject: `Nieuwe aanvraag via Alisya Service — ${form.name}`,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Formspree request failed");
       setDone(true);
     } catch (err) {
       setError("Er ging iets mis bij het versturen. Probeer het later opnieuw.");

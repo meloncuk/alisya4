@@ -33,7 +33,7 @@ export default function Footer() {
             <div>
               <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-4">Contact</p>
               <a href="mailto:info@alisyaservice.nl" className="block text-white text-lg hover:text-white/70 transition-colors mb-2">info@alisyaservice.nl</a>
-              <a href="tel:+31629324102" className="block text-white text-lg hover:text-white/70 transition-colors">06-29324102</a>
+              <a href="tel:+31627451057" className="block text-white text-lg hover:text-white/70 transition-colors">+31 6 27451057</a>
             </div>
             <div>
               <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-4">Atelier</p>
