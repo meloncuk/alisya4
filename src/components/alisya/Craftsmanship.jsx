@@ -25,6 +25,22 @@ function SakuraBackground() {
     </svg>
     <svg className="hidden md:block absolute left-[32%] -top-3 w-[300px] lg:w-[390px] h-auto opacity-[0.30]" viewBox="0 0 390 155" fill="none"><path d="M0 25 C78 39 130 65 194 75 C261 86 315 82 390 127" stroke="#927866" strokeWidth="2.2" strokeLinecap="round"/><Blossom x={82} y={43} scale={.68}/><Blossom x={190} y={72} scale={.65}/><Blossom x={315} y={91} scale={.65}/></svg>
     <span className="absolute left-[27%] top-[31%] w-2 h-4 rounded-full bg-[#DFA08E]/35 rotate-[42deg]"/><span className="absolute right-[31%] top-[20%] w-2 h-4 rounded-full bg-[#E7B0A0]/30 -rotate-[30deg]"/>
+
+    {/* Geniş ekranda boşluğu kıran zarif sakura atmosferi */}
+    <svg className="hidden lg:block absolute right-[26%] bottom-[2%] w-[280px] opacity-[0.16]" viewBox="0 0 300 120" fill="none">
+      <path d="M300 105 C235 88 190 73 145 61 C96 48 54 30 0 16" stroke="#927866" strokeWidth="2" strokeLinecap="round"/>
+      <Blossom x={235} y={88} scale={.58}/><Blossom x={145} y={61} scale={.65}/><Blossom x={55} y={31} scale={.55}/>
+    </svg>
+
+    {/* Bölüme girildiğinde bir kez nazikçe süzülen yapraklar */}
+    <motion.span initial={{opacity:0,y:-15,rotate:-15}} whileInView={{opacity:[0,.34,.26,0],y:[0,80,165,245],x:[0,15,-8,18],rotate:[-15,35,90,155]}} viewport={{once:true,amount:.15}} transition={{duration:5.8,delay:.15,ease:"easeInOut"}} className="absolute left-[18%] top-[7%] w-3 h-5 rounded-[70%_30%_70%_30%] bg-[#DFA08E]"/>
+    <motion.span initial={{opacity:0,y:-12,rotate:10}} whileInView={{opacity:[0,.3,.24,0],y:[0,95,185,275],x:[0,-14,12,-4],rotate:[10,65,125,190]}} viewport={{once:true,amount:.15}} transition={{duration:6.5,delay:.65,ease:"easeInOut"}} className="absolute left-[42%] top-[3%] w-2.5 h-4 rounded-[65%_35%_65%_35%] bg-[#E7B0A0]"/>
+    <motion.span initial={{opacity:0,y:-16,rotate:-8}} whileInView={{opacity:[0,.32,.24,0],y:[0,85,175,260],x:[0,18,3,22],rotate:[-8,50,110,175]}} viewport={{once:true,amount:.15}} transition={{duration:6.1,delay:1.05,ease:"easeInOut"}} className="absolute right-[34%] top-[8%] w-3 h-5 rounded-[70%_30%_70%_30%] bg-[#EDB9AA]"/>
+    <motion.span initial={{opacity:0,y:-10,rotate:18}} whileInView={{opacity:[0,.28,.22,0],y:[0,72,150,225],x:[0,-10,15,-2],rotate:[18,75,135,205]}} viewport={{once:true,amount:.15}} transition={{duration:5.5,delay:1.45,ease:"easeInOut"}} className="hidden md:block absolute right-[16%] top-[5%] w-2.5 h-4 rounded-[65%_35%_65%_35%] bg-[#DFA08E]"/>
+
+    <div className="hidden md:block absolute left-[7%] bottom-[8%] w-28 h-28 rounded-full bg-[#E7B0A0]/[0.06] blur-3xl"/>
+    <div className="hidden md:block absolute right-[9%] top-[15%] w-32 h-32 rounded-full bg-[#DFA08E]/[0.05] blur-3xl"/>
+
   </div>;
 }
 
