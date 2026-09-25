@@ -34,7 +34,7 @@ function SakuraBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
-      <svg className="absolute -left-8 -top-6 w-[270px] sm:w-[330px] md:w-[410px] h-auto opacity-[0.52]"
+      <svg className="absolute -left-8 -top-6 w-[270px] sm:w-[330px] md:w-[500px] lg:w-[570px] h-auto opacity-[0.58]"
            viewBox="0 0 430 390" fill="none">
         <path d="M-20 42 C70 58 104 94 153 139 C202 184 251 192 331 239 C363 258 389 282 432 306"
               stroke="#8D725F" strokeWidth="3.2" strokeLinecap="round"/>
@@ -51,7 +51,7 @@ function SakuraBackground() {
         <circle cx="346" cy="248" r="2.8" fill="#C88B78"/>
       </svg>
 
-      <svg className="absolute -right-5 -bottom-8 w-[220px] sm:w-[280px] md:w-[350px] h-auto opacity-[0.42]"
+      <svg className="absolute -right-5 -bottom-8 w-[220px] sm:w-[280px] md:w-[440px] lg:w-[510px] h-auto opacity-[0.50]"
            viewBox="0 0 380 330" fill="none">
         <path d="M390 294 C320 270 292 236 252 205 C214 175 176 158 111 121 C74 100 41 72 -12 52"
               stroke="#8D725F" strokeWidth="3" strokeLinecap="round"/>
@@ -67,6 +67,22 @@ function SakuraBackground() {
 
       <span className="absolute left-[28%] top-[24%] w-2 h-3.5 rounded-full bg-[#DFA08E]/30 rotate-[38deg]" />
       <span className="absolute right-[30%] bottom-[22%] w-2 h-3.5 rounded-full bg-[#E7B0A0]/25 -rotate-[28deg]" />
+
+      {/* PC'de geniş alanı zarifçe dolduran küçük üst dal */}
+      <svg className="hidden lg:block absolute left-1/2 -translate-x-1/2 -top-2 w-[340px] h-auto opacity-[0.25]"
+           viewBox="0 0 360 125" fill="none">
+        <path d="M18 18 C91 37 130 54 181 65 C235 77 286 74 343 103"
+              stroke="#8D725F" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M121 51 C139 32 154 19 176 10 M254 78 C275 60 292 49 314 44"
+              stroke="#8D725F" strokeWidth="1.5" strokeLinecap="round"/>
+        <Blossom x={74} y={35} scale={0.62} />
+        <Blossom x={176} y={11} scale={0.66} />
+        <Blossom x={224} y={73} scale={0.58} />
+        <Blossom x={314} y={44} scale={0.62} />
+      </svg>
+      <span className="hidden lg:block absolute left-[43%] top-[18%] w-2 h-3.5 rounded-full bg-[#DFA08E]/25 rotate-[52deg]" />
+      <span className="hidden lg:block absolute right-[40%] top-[30%] w-2 h-3.5 rounded-full bg-[#E7B0A0]/22 -rotate-[38deg]" />
+
     </div>
   );
 }
