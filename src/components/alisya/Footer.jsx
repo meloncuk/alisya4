@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -33,7 +34,17 @@ export default function Footer() {
             <div>
               <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-4">Contact</p>
               <a href="mailto:info@alisyaservice.nl" className="block text-white text-lg hover:text-white/70 transition-colors mb-2">info@alisyaservice.nl</a>
-              <a href="tel:+31627451057" className="block text-white text-lg hover:text-white/70 transition-colors">+31 6 27451057</a>
+              <a href="tel:+31627451057" className="block text-white text-lg hover:text-white/70 transition-colors mb-3">+31 6 27451057</a>
+              <a
+                href="https://www.instagram.com/alisyaservice.nl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white text-lg hover:text-white/70 transition-colors"
+                aria-label="Instagram — alisyaservice.nl"
+              >
+                <Instagram size={19} strokeWidth={1.7} />
+                <span>alisyaservice.nl</span>
+              </a>
             </div>
             <div>
               <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-4">Atelier</p>
