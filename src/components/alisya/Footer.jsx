@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -42,7 +41,11 @@ export default function Footer() {
                 className="inline-flex items-center gap-2 text-white text-lg hover:text-white/70 transition-colors"
                 aria-label="Instagram — alisyaservice.nl"
               >
-                <Instagram size={19} strokeWidth={1.7} />
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
                 <span>alisyaservice.nl</span>
               </a>
             </div>
